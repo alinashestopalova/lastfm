@@ -1,0 +1,14 @@
+
+.icon-wrapper{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.icon-image{
+    width: 100px;
+    height: 100px;
+    background-image: url('./img/playButton.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
