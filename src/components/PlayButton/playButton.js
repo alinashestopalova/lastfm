@@ -1,21 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./playButton.css";
+import playImage from './img/playButton.svg'
+import pauseImage from './img/pauseButton.svg'
 
 export const PlayButton = ({ isPlaying, callback }) => {
-  <div className="icon-wrapper" onClick={() => callback(!isPlaying)}>
-    <div className="icon-image" />
-  </div>;
+  return (
+    <div className="icon-wrapper" onClick={() => callback(!isPlaying)}>
+      <img className="icon-image" src={isPlaying ? pauseImage : playImage}/>
+    </div>
+  )
 };
 
-import PropTypes from "prop-types";
-FilterGenres.defaultProps = {
+PlayButton.defaultProps = {
   isPlaying: false,
-  callback: function() {
-    alert("callback is undefined");
-  }
+  callback: () => alert("callback is undefined")
 };
 
-FilterGenres.propTypes = {
+PlayButton.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
   callback: PropTypes.func.isRequired
 };
