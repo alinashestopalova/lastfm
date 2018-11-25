@@ -1,28 +1,17 @@
 import React, { Component } from "react";
+import { BrowserRouter } from 'react-router-dom'
 import "./App.css";
-import { LastfmAPI } from "last.fm.api";
+import { ArtistBlock } from "../../modules/ArtistBlock/artistBlock";
 
 class App extends Component {
-  componentDidMount() {
-    var lfm = new LastfmAPI({
-      api_key: "e0da7de5bac57ca66c3a2c2ba7bccf8a",
-      secret: "	1ef82841ec0ae5ff46f0bd3de38dc724"
-    });
-    lfm.track.getInfo(
-      {
-        artist: "Poliça",
-        track: "Wandering Star"
-      },
-      function(err, track) {
-        if (err) {
-          throw err;
-        }
-        console.log(track);
-      }
-    );
-  }
   render() {
-    return <div className="App" />;
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <ArtistBlock />
+        </div>
+      </BrowserRouter>
+    );
   }
 }
 

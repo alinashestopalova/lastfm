@@ -16,6 +16,3 @@ export const getPagination = array => {                                         
     
     return newArray;
   };
-
-  //функция для стилизации подчёркивания ссылки
-  export const getStyleForLink  = parameter => parameter ? {textDecoration:'none'} : {textDecoration:'underlined'}
