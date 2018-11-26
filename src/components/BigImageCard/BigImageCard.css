@@ -1,0 +1,18 @@
+.BigImageCard{
+    width: 300px;
+    height: 150px;
+    background-color: #ccc;
+    box-shadow: 0px 2px 10px #555;
+    overflow: hidden;
+}
+
+.BigImageCard img {
+    width: 100%;
+    position:absolute;
+}
+
+.BigImageCard p{
+    position:absolute;
+    left:200px;
+    top:100px;
+}
